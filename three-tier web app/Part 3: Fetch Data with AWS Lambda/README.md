@@ -73,7 +73,9 @@ You will also learn how AWS Lambda interacts with DynamoDB to query application 
 
 ## Task 4: Implement the Lambda Function Logic
 17. Select the created function and navigate to **code source** under **code** section.
-18. Copy and replace the code shown in the editor with the code in `lambdacodesource1.txt` (replace `enter your region` with the actual region):
+18. Copy and replace the code shown in the editor with the code in `lambdacodesource1.txt` with below configuration:
+    > replace `enter your region` with the actual region
+    
 19. Click **Deploy**.
 
 ## Task 5: Write a Lambda Function Test
