@@ -12,6 +12,20 @@ The solution consists of the following components:
 - **Amazon CloudWatch** monitors CloudTrail events, evaluates them against configured rules, and triggers alerts when predefined conditions are met.
 - **Amazon Simple Notification Service (SNS)** delivers alert notifications to subscribed users through supported communication channels, such as email.
 
+---
+
+The project is divided into two stages:
+
+Stage 1: Configure Secret & Logging
+- **Task 1** - Create the secret that will be monitored
+- **Task 2** - Configure AWS CloudTrail to capture API activity
+- **Task 3** - Testing the CloudTrail set up
+
+Stage 2: Configure Monitoring and Alerts
+- **Task 4** - Create CloudWatch rules to monitor CloudTrail events
+- **Task 5** - Configure CloudWatch Alarm and Amazon SNS to receive alert events
+- **Task 6** - Verify the end-to-end workflow by generating an event and confirming that a notification is successfully delivered
+
 ## 🛠️ Technologies & Tools
 
 `AWS Secrets Manager` `AWS CloudTrail` `Amazon CloudWatch` `Amazon SNS` `Amazon S3` `AWS CLI`
