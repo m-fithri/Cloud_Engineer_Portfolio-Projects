@@ -110,7 +110,11 @@ This phase also sets up the Presentation Tier of the three-tier web application 
 32. From bucket **permission** settings, look for **block public access** under bucket settings and click **Edit**.
 33. Unselect the **block all public access"' options and click **Save Changes**
 34. Validate whether the steps are working by refreshing the error page but it will still be inaccessible since S3 bucket files are still configured as private.
-35. Edit the S3 bucket policy by including the command below: (include `,` for multiple statement & replace `<S3 bucket ARN name>` with the actual bucket ARN name)
+35. Edit the S3 bucket policy by including the command below: 
+    > include `,` for multiple statement
+    
+	> replace `<S3 bucket ARN name>` with the actual bucket ARN name
+
     ```
     {
     "Sid": "PublicReadGetObject",
