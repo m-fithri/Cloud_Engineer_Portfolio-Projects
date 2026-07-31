@@ -131,7 +131,9 @@ AWS Lambda serves as the application's compute layer, executing business logic, 
 ## Task 5: Write Documentation for your API in JSON [Optional]
 28. In the API gateway under the selected API, navigate to **Documentation** on the left side of the panel.
 29. Select **Create Documentation Part** and select **API** for documentation type.
-30. Enter below line of code (replace `<invoke URL>` with the created invoke URL).
+30. Enter below line of code with below configuration:
+    > replace `<invoke URL>` with the created invoke URL
+    
     ```
     {
     "description": "The UserRequestAPI manages user data requests. It supports operations to get user details based on unique identifiers (i.e. userId).",
