@@ -1,6 +1,6 @@
 # Three-tier Web App
 
-## Overview
+## 📌 Overview
 
 A three tier web application is a software architecture that separates an application into three independent layers: which is **Presentation Tier**, **Application/Logic Tier** and **Database Tier**.
 
@@ -37,11 +37,11 @@ The project is structured into four parts, each covering a specific set of objec
 **Part 4: Build a Three-tier Web App**
 - Connect all these services together seamlessly for your three-tier architecture.
 
-## Technologies & Tools
+## 🛠️ Technologies & Tools
 
 `Amazon S3`  `CloudFront`  `AWS Lambda`  `Amazon API Gateway`  `Amazon DynamoDB`
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 Users
