@@ -8,7 +8,15 @@ Automation can helps improved the software development process by eliminating re
 
 This project demonstrates how to use Terraform to provision an Amazon S3 bucket using Infrastructure as Code (IaC).
 
-The goal is to learn how to install and configure Terraform, initialize a Terraform project, troubleshoot common issues, and successfully apply a Terraform configuration to create and manage an S3 bucket on AWS.
+By completing this project, we will learn how to install and configure Terraform, initialize a Terraform project, troubleshoot common issues, and successfully apply a Terraform configuration to create and manage an S3 bucket on AWS.
+
+---
+
+The goals of this project are to:
+- Install and configure Terraform for Infrastructure as Code (IaC).
+- Configure AWS credentials to enable Terraform to authenticate with your AWS account.
+- Provision and manage Amazon S3 buckets using Terraform.
+- Upload and manage files in an Amazon S3 bucket using Terraform.
 
 ## 🛠️ Technologies & Tools
 
@@ -18,30 +26,28 @@ The goal is to learn how to install and configure Terraform, initialize a Terraf
 
 ```
 
-                        Setup
-[Install Terraform ⟹ Set up Terraform project ⟹ Create main.tf]
-
-                          │ 
-                          ▼
-
-              [Plan Terraform configuration]
-
-                          │ 
-                          ▼
-
-                  Troubleshooting
-      [Install AWS CLI ⟹ Set up AWS Access Keys]
-
-                          │ 
-                          ▼
-
-              [Apply Terraform configuration]
-
-                          │ 
-                          ▼
-
-                        Output
-                [Launch an S3 bucket]
+      Setup                                                                                            Troubleshooting
+    ───────────────────────────────────                                                              ─────────────────────────────────
+   │                                   │                                                            │                                 │
+   │       [Install Terraform]         │                                                            │                                 │
+   │                                   │                                                            │        [Install AWS CLI]        │
+   │                │                  │                                                            │                                 │
+   │                ▼                  │                                                            │                │                │
+   │                                   │                          Plan                              │                ▼                │
+   │    [Set up a Terraform project]   │   ══════════════ ➤    Terraform     ══════════════ ➤     │                                 │
+   │                                   │                      Configuration                         │     [Set up AWS Access Keys]    │
+   │                │                  │                                                            │                                 │
+   │                ▼                  │                                                            │                                 │
+   │                                   │                                                             ─────────────────────────────────
+   │         [Create main.tf]          │                                                                              │
+   │                                   │                                                                              │
+    ───────────────────────────────────                                                                               │
+                                               Output                                                                 │
+                                 ─────────────────────────────                               Apply                    │
+                                |                             │     ◀ ══════════════       Terraform       ◀ ═════════
+                                │    [Launch an S3 bucket]    │                           Configuration
+                                │                             │ 
+                                 ─────────────────────────────                                   
 
 ```
 
