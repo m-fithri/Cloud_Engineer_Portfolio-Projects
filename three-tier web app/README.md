@@ -44,24 +44,60 @@ The project is structured into four parts, each covering a specific set of objec
 ## 🏗️ Architecture
 
 ```
-Users
 
-  │
-  ▼
+     Users
 
-Presentation Tier
-[script.js + index.html + style.css] → [S3 bucket] → [CloudFront distribution] → [Distributed website]
+       │
+       │
+       │
+       ▼
 
-  │
-  ▼
+  Presentation Tier
 
-Logic Tier
-[API Gateway] → [Lambda function]
+  Setup                                                                                 Troubleshooting                              Output
+   ──────────────────                                                                  ─────────────────────────────────             ──────────────────
+  │                  │                                                                │                                 │           │                  │
+  │   [script.js]    │                                                                │  [Origin             [S3        │           │   [Distributed   │
+  │                  │                                                                │    Access   ════ ➤   Bucket    │  ════ ➤  │     Website]     │
+  │   [index.html]   │ ════ ➤ [S3 bucket] ════ ➤ [CloudFront Distribution] ════ ➤   │   Control]           Policy]    │          │                  │
+  │                  │                                                                │                                 │           │                  │
+  │   [style.css]    │                                                                 ─────────────────────────────────             ──────────────────
+  │                  │                                                    
+   ──────────────────
 
-  │
-  ▼
+       │
+       │
+       │
+       ▼
 
-Data Tier
-[DynamoDB database]
+  Logic Tier
+
+    API Gateway
+   ──────────────────────────
+  │                          │
+  │      User Resource       │
+  │       ──────────────     │
+  │      │             │     │
+  │      │   [ GET     │     │       ══════ ➤      [ Lambda ]
+  │      │   method ]  │     │
+  │      │             │     │
+  │      ──────────────      │
+  │                          │
+   ──────────────────────────
+
+       │
+       │
+       │
+       ▼
+
+  Data Tier
+
+  Setup                                                                                  Test                      Troubleshooting                Output
+ ───────────────────────────────────────────────────────────────────────────          ─────────────────           ──────────────────           ────────────────────────
+│                                                                           │        │                 |         |                  |         |                        |
+│  [DynamoDB   ══ ➤  [Add table    ══ ➤  [Lambda    ══ ➤  [Add function   │  ══ ➤ |  [Test Lambda   |  ══ ➤  |  [Update Lambda  |  ══ ➤  |  [Lambda function can  |
+│     table]                 items]        function]                 code]  │        │      function]  |         |      IAM Role]   |         |        receive data]   | 
+│                                                                           │        │                 |         |                  |         |                        |
+ ───────────────────────────────────────────────────────────────────────────          ─────────────────           ──────────────────           ────────────────────────         
 
 ```
