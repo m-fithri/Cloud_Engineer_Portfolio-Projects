@@ -10,6 +10,14 @@ This project demonstrates how to use AWS Secrets Manager to securely store, mana
 
 By completing this project, we will learn secure credential management best practices and understand how production applications protect sensitive information when connecting to AWS services and databases.
 
+---
+
+The goals of this project are to:
+- Identify how a web application can insecurely store sensitive credentials.
+- Explore how GitHub Secret Scanning helps detect and prevent secrets from being committed to a repository.
+- Update the web application to securely store and retrieve credentials using AWS Secrets Manager.
+- Verify that the application's source code can be safely shared or made public without exposing sensitive credentials.
+
 ## 🛠️ Technologies & Tools
 
 `AWS Secrets Manager` `AWS IAM` `Github`
