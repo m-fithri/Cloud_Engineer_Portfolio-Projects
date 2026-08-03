@@ -34,13 +34,16 @@ Stage 2: Configure Monitoring and Alerts
 
 ```
 
-                                        CloudWatch
-[Secrets Manager] ⟸ [CloudTrail] ⟹ [Log group + Filter + Alarm] ⟹ [Amazon SNS] ⟹ Email
+                                                    CloudWatch
+                                                    ────────────────────────────────────────────────
+                                                   │                                                │
+[Secret Manager]  ◀ ════  [CloudTrail]  ════ ➤    │  [Log Group] ════ ➤ [Filter] ════ ➤ [Alarm]  │  ════ ➤  [Amazon SNS]  ════ ➤  [Email]
+                                                   │                                                │
+                                │                   ──────────────────────────────────────────────── 
+                                │
+                                ▼
 
-                          │ 
-                          ▼
-
-                      [S3 Bucket]
+                           [S3 Bucket]
 
 ```
 
