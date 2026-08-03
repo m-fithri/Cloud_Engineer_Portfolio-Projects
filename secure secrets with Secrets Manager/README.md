@@ -18,12 +18,12 @@ By completing this project, we will learn secure credential management best prac
 
 ```
 
-                                                                                            [Secret]                                                                             
+                                                                                            [Secret]
                                                                                                 
-                                                                                                │                                                 
+                                                                                                │
                                     Web App Code                                                │
                                     ─────────────────────────────────────────────────────────   │ ───────────────
-                                   │                                                            ▼                │    
+                                   │                                                            ▼                │
         GitHub                     │                                                                             │
  [Original Repository]   ══════════════ ➤   [Cloned code]  ⟹  [Hardcode credentials]  ⟹  [Secure code]       │
                                    │                                                                             │
@@ -33,7 +33,7 @@ By completing this project, we will learn secure credential management best prac
           │                        │                                                                             │
           │                        │                             [denied]                  [allowed]             │
           │                        │                                                                             │
-          │                         ──────────────────────────────  │   ─────────────────────  │   ───────────────                               
+          │                         ──────────────────────────────  │   ─────────────────────  │   ────────────── 
           │                                                         │                          │
           │                                                         │                          │
           │                                                         ─ ── ── ── ── ── ── ── ── ──
@@ -59,7 +59,7 @@ By completing this project, we will learn secure credential management best prac
 - A service that helps you securely control access to AWS resources.
 
 **3 GitHub**
-- A a platform where developers share and collaborate on code.
+- A platform where developers share and collaborate on code.
 
 **4 AWS Key Management Service (KMS)**
 - A managed service that lets you create and control the cryptographic keys used to protect your data.
@@ -68,22 +68,22 @@ By completing this project, we will learn secure credential management best prac
 
 ### 🔍 Additional Notes
 
-**5) app.py**
+**5) `app.py`**
 - A main file containing the logic of the web app (how the app will respond to user request & interact with AWS services).
 
-**6) How is app.py built?**
+**6) How is `app.py` built?**
 - Built using FastAPI, a web framework for building APIs with Python.
 
 **7) Import Statements**
 - A command used to reuse code from external files, libraries, or modules.
 
-**8) config.py**
+**8) `config.py`**
 - A file that contains the configuration settings for the web app.
 
 **9) Dockerfile**
 - A plain-text script containing ordered instructions used to automate the creation of a Docker image.
 
-**10) requirements.txt**
+**10) `requirements.txt`**
 - A list of python libraries required by the app to run.
 
 **11) Forking in GitHub**
@@ -93,7 +93,7 @@ By completing this project, we will learn secure credential management best prac
 
 | Forking | Cloning |
 |---|---|
-| Creates a copy of the repository on your github account (cloud) | Cloning downloads a copy of the repository to your local computer |
+| Creates a copy of the repository on your GitHub account (cloud) | Cloning downloads a copy of the repository to your local computer |
 
 **13) Why running the app in virtual environment?**
 - It keeps all the packages we need to run this web app.
@@ -102,9 +102,9 @@ By completing this project, we will learn secure credential management best prac
 **14) Secret Rotation**
 - Process of automatically changing your secrets on a regular schedule (best for high-risk credentials like database passwords, privileged API keys, and service account credentials).
 
-**15) What does the new code in config.py do with the retrieved secret?**-
-- Code are added in the config.py to extract the values of the secret that we stored in Secrets Manager.
+**15) What does the new code in `config.py` do with the retrieved secret?**-
+- Code are added in the `config.py` to extract the values of the secret that we stored in Secrets Manager.
 - It uses the function suggested by the code sample and splits up the secret value to store the access key ID & secret access key in the same variable that `app.py` continue to use.
 
-**16) merge conflicts**
+**16) Merge conflicts**
 - Happen when the same line of code has been changed in different commit
