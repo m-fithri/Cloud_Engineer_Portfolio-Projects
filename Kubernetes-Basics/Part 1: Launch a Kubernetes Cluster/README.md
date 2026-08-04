@@ -1,8 +1,8 @@
 # 📌 Overview
 
-The first part of this project focuses on building the foundation of an AI chatbot using Amazon Lex.
+The first part of the Kubernetes project focuses on deploying a Kubernetes cluster on AWS using Amazon EKS.
 
-By the end of this section, a basic chatbot is built and tested to recognize user greetings, respond with natural conversational flow, and gracefully handle unrecognized inputs through fallback logic.
+The implementation includes EC2 instance provisioning, EKS cluster creation, infrastructure monitoring and IAM-based cluster access.
 
 # 🎯 Objective
 
