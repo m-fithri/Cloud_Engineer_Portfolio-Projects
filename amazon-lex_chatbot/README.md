@@ -1,4 +1,4 @@
-# Three-tier Web App
+# Amazon Lex Chatbot
 
 ## 📌 Overview
 
