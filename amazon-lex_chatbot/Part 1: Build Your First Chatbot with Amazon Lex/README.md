@@ -20,7 +20,7 @@ By the end of this section, a basic chatbot is built and tested to recognize use
 - Ability of computer systems to perform tasks that typically require human intelligence.
 
 **2) Amazon Lex**
-- An AWS service for building conversational interfaces using both voice and text,
+- An AWS service for building conversational interfaces using both voice and text.
 
 ## 🔍 Additional Notes
 
