@@ -17,7 +17,7 @@ By the end of this section, the chatbot is capable of capturing user details thr
 **1) Slots** 
 - Pieces of information that Amazon Lex collects from a user to fulfill an intent.
 
-**2) Why Include the text `{accountType}` in the Sample Utterances for the CheckBalance Intent?t**
+**2) Why Include the text `{accountType}` in the Sample Utterances for the CheckBalance Intent?**
 - The {accountType} placeholder tells Amazon Lex to extract the accountType slot directly from the user's input. 
 
 **3) What Does the "Restrict to Slot Values" Setting Do?**
