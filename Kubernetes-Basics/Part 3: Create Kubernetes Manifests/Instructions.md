@@ -27,8 +27,8 @@
    touch flask-service.yaml
    ```
 
-7. Open the `flask-service.yaml` with any text editor and paste the command shown in `flask-service.txt`.
-8. Exit the editor and save the changes.
+8. Open the `flask-service.yaml` with any text editor and paste the command shown in `flask-service.txt`.
+9. Exit the editor and save the changes.
 
 ## Task 3: Delete Resources [Optional]
 
