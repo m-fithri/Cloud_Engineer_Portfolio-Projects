@@ -15,20 +15,27 @@
 7. Click **Connect**.
 8. Select **In web browser** tab and **EC2 instance connect**.
 9. Click **Connect** and you should be connected to the EC2 instance using terminal.
-10. Navigate to AWS console, search for `IAM` and select **Roles** from the left navigation panel.
-11. Click **Create role** and configure the following options:
+10. Enter below command in the terminal to download, extract and install `eksctl`:
+    ```
+    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+	sudo mv -v /tmp/eksctl /usr/local/bin
+    ```
+
+11. After installation completed, enter `eksctl version` to validate the installation.
+12. Navigate to AWS console, search for `IAM` and select **Roles** from the left navigation panel.
+13. Click **Create role** and configure the following options:
     - **trusted entity type**: AWS service
     - **use case**: EC2
 
-12. Click **Next** and select the `AdministratorAccess` permission policy.
-13. Click **Next**.
-14. Enter `my-eks-instance-role` for role name and provide the description.
-15. Select **Create role**.
-16. Head back to EC2 console and select **Instances** from the left panel.
-17. Select the created instance, expand the **Actions** dropdown and select **Security**.
-18. Click **Modify IAM role**.
-19. Under **IAM role**, select the `my-eks-instance-role` and click **Update IAM role**.
-20. Open the `eks-instance` terminal page and enter the command shown in `cluster_create-2.txt`.
+14. Click **Next** and select the `AdministratorAccess` permission policy.
+15. Click **Next**.
+16. Enter `my-eks-instance-role` for role name and provide the description.
+17. Select **Create role**.
+18. Head back to EC2 console and select **Instances** from the left panel.
+19. Select the created instance, expand the **Actions** dropdown and select **Security**.
+20. Click **Modify IAM role**.
+21. Under **IAM role**, select the `my-eks-instance-role` and click **Update IAM role**.
+22. Open the `eks-instance` terminal page and enter the command shown in `cluster_create-2.txt`.
     > The EKS cluster set up should be successfully running in the terminal now
 
 ## Task 2: Pull the Code for your Backend
