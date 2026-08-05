@@ -44,6 +44,8 @@
 24. Click **Modify IAM role**.
 25. Under **IAM role**, select the `my-eks-instance-role` and click **Update IAM role**.
 26. Open the `eks-instance` terminal page and re-enter the command shown in `cluster_create-2.txt` again.
+    > Make sure to replace the `<your-region-code>` with the current actual region
+    
     > The EKS cluster set up should be successfully running in the terminal now
 
 ## Task 4: Track how AWS creates your EKS cluster
